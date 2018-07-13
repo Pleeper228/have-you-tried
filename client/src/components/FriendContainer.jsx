@@ -26,10 +26,10 @@ export default class FriendContainer extends Component {
       friend: filteredFriend
     })
   }
-  
+
 
   render() {
-    return (  
+    return (
       <div id='friend-page'>
         {this.state.friend.map((friend, i) => {
         console.log(friend)
@@ -39,11 +39,11 @@ export default class FriendContainer extends Component {
           <Card>
           <Card.Content>
           <Card.Header as='h3'>{friend.restaurant_name}</Card.Header>
-          <Card.Description> 
+          <Card.Description>
             {friend.comment_text}
           </Card.Description>
-          </Card.Content> 
-          </Card> 
+          </Card.Content>
+          </Card>
           </React.Fragment>
       )
     })

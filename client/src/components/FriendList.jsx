@@ -3,7 +3,7 @@ import Friend from './Friend'
 import AddFriend from './AddFriend'
 import EditFriend from './EditFriend'
 // import {Header, Icon} from 'semantic-ui-react'
-const apiUrl = 'https://have-you-tried.herokuapp.com/comments'
+const apiUrl = 'https://have-you-tried.herokuapp.com/friends'
 
 class FriendList extends Component {
   state = {
