@@ -11,7 +11,7 @@ class FriendList extends Component {
   }
 
   componentDidMount() {
-    fetch(apiUrl)
+    fetch('https://have-you-tried.herokuapp.com/friends')
       .then(response => response.json())
       .then(friends => {
         return this.setState({friends: friends})
@@ -44,16 +44,15 @@ class FriendList extends Component {
           : this.setState({ error: false })
       })
   }
+  
+  deleteFriend(id){
+    console.log(id)
+    const url = `https://have-you-tried.herokuapp.com/friends/${id}`
+    fetch(url, {
+      method: 'DELETE'
+    })
+  }
 
-  deleteFriend(friend){
-    console.log('clicked')
-    console.log(friend)
-    // event.preventDefault()
-    // const url = `https://have-you-tried.herokuapp.com/friends${this.state.id}`
-    // fetch(url, {
-    //   method: 'DELETE'
-    // })
-}
 
 editFriend = (event) => {
   event.preventDefault()

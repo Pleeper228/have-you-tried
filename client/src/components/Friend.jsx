@@ -23,7 +23,7 @@ class Friend extends React.Component {
               <Card.Header as={NavLink}
           to={`/friends/${friend.id}`}>{friend.friend_name}</Card.Header>
             </Card.Content>
-            <a onClick={() => this.props.deleteFriend(friend)}>Delete</a>
+            <a onClick={() => this.props.deleteFriend(friend.id)}>Delete</a>
             {/* <a onClick={this.props.editFriend(friend)}>Delete</a> */}
           </Card>
         )
